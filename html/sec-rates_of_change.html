@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Rates of Change</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      $(document).trigger("runestone:mathjax-ready");
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="handout-1.html"><span class="title">Rates of Change and Limits</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="handout-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="handout-1.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="handout-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="handout-1.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul><li class="link active">
+<a href="sec-rates_of_change.html" data-scroll="sec-rates_of_change" class="internal"><span class="codenumber">1</span> <span class="title">Rates of Change</span></a><ul>
+<li><a href="sec-rates_of_change.html#subsec-performance_criteria" data-scroll="subsec-performance_criteria" class="internal">Performance Criteria</a></li>
+<li><a href="sec-rates_of_change.html#subsec-average_rate_of_change" data-scroll="subsec-average_rate_of_change" class="internal">Average Rate of Change</a></li>
+<li><a href="sec-rates_of_change.html#subsec-avg_rate_of_change" data-scroll="subsec-avg_rate_of_change" class="internal">Average Rate of Change of a Function</a></li>
+<li><a href="sec-rates_of_change.html#subsec-avg_velocity" data-scroll="subsec-avg_velocity" class="internal">Average Velocity</a></li>
+<li><a href="sec-rates_of_change.html#subsec-secant_lines" data-scroll="subsec-secant_lines" class="internal">Secant Lines</a></li>
+<li><a href="sec-rates_of_change.html#subsec-inst_rate_of_change" data-scroll="subsec-inst_rate_of_change" class="internal">Instataneous Rate of Change</a></li>
+</ul>
+</li></ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-rates_of_change"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1</span> <span class="title">Rates of Change</span>
+</h2>
+<section class="subsection" id="subsec-performance_criteria"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1</span> <span class="title">Performance Criteria</span>
+</h3>
+<ol id="p-1" class="decimal">
+<li id="li-1"><p id="p-2">Determine the average rates of change of a function algebraically from its expression.</p></li>
+<li id="li-2"><p id="p-3">Determine the average rate of change of a function from its graph.</p></li>
+<li id="li-3"><p id="p-4">Calculate average velocity from a set of data points over an interval.</p></li>
+<li id="li-4"><p id="p-5">Calculate an estimate for the instantaneous velocity at a point from a set of data points.</p></li>
+<li id="li-5"><p id="p-6">Approximate the instantaneous rate of change(or slope of the graph, or derivative) of a function at a point, from its graph.</p></li>
+</ol></section><section class="subsection" id="subsec-average_rate_of_change"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2</span> <span class="title">Average Rate of Change</span>
+</h3>
+<article class="example example-like" id="example-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><p id="p-7">Suppose that while climbing Mt. Shasta you note the temperature at the bottom and at the top of the mountain. Mt. Shasta is roughly 14,000 feet above sea level. At the base of the mountain (5,000 feet above sea level) the temperature is <span class="process-math">\(45^{\circ}\)</span>F, while at the summit, the temperature is <span class="process-math">\(-15^{\circ}\)</span>F. What is the <dfn class="terminology">average rate of change</dfn> of temperature while climbing?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-8">It's easy to see that the temperature is a function of the height (the higher you go, the colder it gets). So, we first want to find out the change in temperature between the two points (base(<span class="process-math">\(t_b\)</span>) and summit(<span class="process-math">\(t_s\)</span>)). The change is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+t_s-t_b = -15^{\circ}\text{F}-45^{\circ}\text{F}= -60^{\circ}\text{F}.
+\end{equation*}
+</div>
+<p class="continuation">However, you are asked to find the {\bf average} rate of change of temperature while you are climbing. The temperature changes due to change in height which is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+h_s - h_b = 14,000\text{ ft.} - 5,000\text{ ft.} = 9,000\text{ ft.}
+\end{equation*}
+</div>
+<p class="continuation">Therefore, the average rate of change of temperature is the change in temperature with respect to the height i.e.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\textbf{average rate of change } = \frac{t_s-t_b}{h_s-h_b} = \frac{-60^{\circ}\text{F}}{9,000\text{ ft.}} = -0.0067^{\circ}\text{F}/\text{foot}
+\end{equation*}
+</div>
+</div></div>
+</div></article></div>
+<p id="p-9">In the previous example the temperature(<span class="process-math">\(t\)</span>) was a function of the height(<span class="process-math">\(h\)</span>). Therefore, <span class="process-math">\(t\)</span> was the <dfn class="terminology">dependent</dfn> variable and <span class="process-math">\(h\)</span> was the <dfn class="terminology">independent</dfn> variable. In general,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\textbf{Average rate of change} = \frac{\textbf{Change in the dependent variable}}{\textbf{Change in the independent variable}}
+\end{equation*}
+</div></section><section class="subsection" id="subsec-avg_rate_of_change"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3</span> <span class="title">Average Rate of Change of a Function</span>
+</h3>
+<p id="p-10">Consider a function <span class="process-math">\(y = f(x)\text{.}\)</span> Recall that <span class="process-math">\(x\)</span> is the independent variable and <span class="process-math">\(y\)</span> is the dependent variable. Also consider two points <span class="process-math">\(x_1\)</span> and <span class="process-math">\(x_2\)</span> in the domain of <span class="process-math">\(f\)</span> with <span class="process-math">\(x_2&gt;x_1\text{.}\)</span> Let <span class="process-math">\(y_1=f(x_1)\)</span> and <span class="process-math">\(y_2=f(x_2)\text{.}\)</span> Then going by the previous definition of the average rate of change we have,</p>
+<article class="definition definition-like" id="def-av_rate_of_change_def"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
+</h4>
+<p id="p-11">For a function <span class="process-math">\(f(x)\)</span> with points <span class="process-math">\(x_1, x_2\)</span> (<span class="process-math">\(x_2 &gt; x_1\)</span>) in the domain of <span class="process-math">\(f\text{,}\)</span> <dfn class="terminology">the average rate of change of f with respect to</dfn>&gt;  <span class="process-math">\(x\)</span> over the interval <span class="process-math">\([x_1, x_2]\)</span> is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\Delta f}{\Delta x} = \frac{f(x_2)-f(x_1)}{x_2-x_1}
+\end{equation*}
+</div></article><p id="p-12">Here <span class="process-math">\(\Delta f\)</span> and <span class="process-math">\(\Delta x\)</span> denote the change in <span class="process-math">\(f\)</span> and <span class="process-math">\(x\)</span> respectively.</p>
+<article class="example example-like" id="ex-avg_rate1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-avg_rate1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-avg_rate1"><article class="example example-like"><p id="p-13">Consider the function <span class="process-math">\(f(x) = -2x^2 + 4x -1\text{.}\)</span> Find the average rate of change of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(x\)</span> from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x=1\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-14">Here <span class="process-math">\(x_1 = 0\)</span> and <span class="process-math">\(x_2=1\text{.}\)</span> Therefore,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\Delta f}{\Delta x} = \frac{f(1)-f(0)}{1-0} = \frac{1-(-1)}{1}=2
+\end{equation*}
+</div>
+</div></div>
+</div></article></div></section><section class="subsection" id="subsec-avg_velocity"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4</span> <span class="title">Average Velocity</span>
+</h3>
+<p id="p-15">Consider a distance function <span class="process-math">\(s(t)\)</span> which denotes the distance of a particle from the starting point at time <span class="process-math">\(t\text{.}\)</span> Between the time interval <span class="process-math">\([t_1, t_2]\text{,}\)</span> the average rate of change of the function <span class="process-math">\(s(t)\)</span> with respect to <span class="process-math">\(t\)</span> is defined to be the <dfn class="terminology">average velocity</dfn> of the particle, i.e.</p></section><article class="definition definition-like" id="def-avg_velocity"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
+</h3>
+<p id="p-16">The <dfn class="terminology">average velocity</dfn> of a moving particle with distance function <span class="process-math">\(s(t)\)</span> between the time interval <span class="process-math">\([t_1, t_2]\)</span> is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\Delta s}{\Delta t} = \frac{s(t_2)-s(t_1)}{t_2-t_1}
+\end{equation*}
+</div></article><article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-17">A ball dropped from a state of rest at time <span class="process-math">\(t=0\)</span> travels a distance <span class="process-math">\(s(t)=4.9t^2\)</span> m in <span class="process-math">\(t\)</span> seconds. Compute its average velocity over the time interval <span class="process-math">\([3, 3.5]\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
+<p id="p-18">Here <span class="process-math">\(t_1 = 3\)</span> and <span class="process-math">\(t_2=3.5\text{.}\)</span> The average velocity between these two points is therefore,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\Delta s}{\Delta t} = \frac{s(3.5)-s(3)}{3.5-3}=\frac{60.025-44.1}{0.5} \text{ m/s}= 31.85 \text{ m/s}.
+\end{equation*}
+</div>
+</div></div>
+</div></article></div>
+<section class="subsection" id="subsec-secant_lines"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.5</span> <span class="title">Secant Lines</span>
+</h3>
+<p id="p-19">Let's draw the graph of the function in <a href="" class="xref" data-knowl="./knowl/ex-avg_rate1.html" title="Example 1.3">Example 1.3</a></p>
+<figure class="figure figure-like" id="figure-1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/im-graph_of_ex.svg" role="img" class="contained" alt="Graph of \(f(x) = -2x^2 + 4x - 1\)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.6<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x) = -2x^2 + 4x - 1\)</span></figcaption></figure><p id="p-20">If we plot the two points <span class="process-math">\((0, -1)\)</span> and <span class="process-math">\((1, 1)\)</span> on the graph and join them by a straight line, we end up having</p>
+<figure class="figure figure-like" id="figure-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/im-secant_line.svg" role="img" class="contained" alt="Graph of \(f(x) = -2x^2 + 4x - 1\)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.7<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x) = -2x^2 + 4x - 1\)</span></figcaption></figure><p id="p-21">This red line joining these two points on the graph of the function is called a <dfn class="terminology">secant line</dfn>, and the slope of the secant line is the average rate of change of the function between those two points. (Recall how you found the slope of a line joining two points)</p>
+<p id="p-22">Hence, slope of the secant line is 2.</p></section><section class="subsection" id="subsec-inst_rate_of_change"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.6</span> <span class="title">Instataneous Rate of Change</span>
+</h3>
+<p id="p-23">Instantaneous rate of change is similar to the average rate of change that we looked at earlier <em class="alert">but</em>  over <dfn class="terminology">“very small”</dfn> intervals. This is a very vague way to describe instantaneous rate of change, therefore, let's look at the earlier <a href="" class="xref" data-knowl="./knowl/ex-avg_rate1.html" title="Example 1.3">Example 1.3</a></p>
+<article class="example example-like" id="example-4"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-example-4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><p id="p-24">Consider the function <span class="process-math">\(f(x) = -2x^2 + 4x -1\text{.}\)</span> Find the instantaneous rate of change of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=0\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-25">Here we have just one point. As we mentioned in our “vague” definition, let's consider the small interval <span class="process-math">\([0, 0.1]\)</span>&gt;, and let's compute the average rate of change over this interval.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\Delta f}{\Delta x} \Bigg |_{[0, 0.1]} = \frac{-0.62-(-1)}{0.1-0}=\frac{0.38}{0.1} = 3.8
+\end{equation*}
+</div>
+<p id="p-26">Now let's look at an even smaller interval <span class="process-math">\([0, 0.01]\text{.}\)</span> The average rate of change over this interval is,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\Delta f}{\Delta x} \Bigg |_{[0, 0.01]} = \frac{-0.9602-(-1)}{0.01-0}=\frac{0.0398}{0.01} = 3.98
+\end{equation*}
+</div>
+<p id="p-27">We can keep on doing this for few more intervals each smaller than the previous. We construct a table involving these intervals.</p>
+<figure class="table table-like" id="table-1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.9<span class="period">.</span></span><span class="space"> </span>Average Rates of Changes on Intervals</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l1 t0 lines">Interval</th>
+<th scope="col" class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\Delta f/ \Delta x\)</span></th>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\([0, 0.1]\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3.8\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\([0, 0.01]\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3.98\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\([0, 0.001]\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3.998\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\([0, 0.0001]\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3.9998\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\([0, 0.00001]\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3.99998\)</span></td>
+</tr>
+</table></div></figure>
+</div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>
