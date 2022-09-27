@@ -84,6 +84,7 @@ startup: {
 <li><a href="sec-rates_of_change.html#subsec-avg_velocity" data-scroll="subsec-avg_velocity" class="internal">Average Velocity</a></li>
 <li><a href="sec-rates_of_change.html#subsec-secant_lines" data-scroll="subsec-secant_lines" class="internal">Secant Lines</a></li>
 <li><a href="sec-rates_of_change.html#subsec-inst_rate_of_change" data-scroll="subsec-inst_rate_of_change" class="internal">Instataneous Rate of Change</a></li>
+<li><a href="sec-rates_of_change.html#subsec-tangent_lines" data-scroll="subsec-tangent_lines" class="internal">Tangent Lines</a></li>
 </ul>
 </li></ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
@@ -198,7 +199,7 @@ h_s - h_b = 14,000\text{ ft.} - 5,000\text{ ft.} = 9,000\text{ ft.}
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-4"><article class="example example-like"><p id="p-24">Consider the function <span class="process-math">\(f(x) = -2x^2 + 4x -1\text{.}\)</span> Find the instantaneous rate of change of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=0\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original has-tabular" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
-<p id="p-25">Here we have just one point. As we mentioned in our “vague” definition, let's consider the small interval <span class="process-math">\([0, 0.1]\)</span>&gt;, and let's compute the average rate of change over this interval.</p>
+<p id="p-25">Here we have just one point. As we mentioned in our “vague” definition, let's consider the small interval <span class="process-math">\([0, 0.1]\text{,}\)</span> and let's compute the average rate of change over this interval.</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \frac{\Delta f}{\Delta x} \Bigg |_{[0, 0.1]} = \frac{-0.62-(-1)}{0.1-0}=\frac{0.38}{0.1} = 3.8
@@ -236,9 +237,19 @@ h_s - h_b = 14,000\text{ ft.} - 5,000\text{ ft.} = 9,000\text{ ft.}
 <td class="c m b1 r1 l1 t0 lines"><span class="process-math">\([0, 0.00001]\)</span></td>
 <td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3.99998\)</span></td>
 </tr>
-</table></div></figure>
+</table></div></figure> The above table clearly shows that, as the intervals get smaller and smaller, the difference quotient <span class="process-math">\(\dfrac{\Delta f}{\Delta x}\)</span> gets closer to 4. This suggests that 4 is a good candidate for the instantaneous rate of change of the function <span class="process-math">\(f\)</span> at <span class="process-math">\(x=0\text{.}\)</span>
 </div></div>
-</div></article></div></section></section></div></main>
+</div></article></div>
+<p id="p-28">We can now formally have a definition for the instantaneous rate of change and instantaneous velocity.</p>
+<article class="definition definition-like" id="def-inst_rate_of_change"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
+</h4>
+<p id="p-29">The <dfn class="terminology">instantaneous rate of change</dfn> is the <em class="alert">limit</em> (a concept we will be learning soon) of the average rate of change as the length of the intervals shrink to zero. Similarly the <dfn class="terminology">instantaneous velocity</dfn> is the <em class="alert">limit</em> of the average velocity as the length of the time intervals shrink to zero. The instantaneous velocity also describes the velocity of a particle at that instant of time.</p></article></section><section class="subsection" id="subsec-tangent_lines"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7</span> <span class="title">Tangent Lines</span>
+</h3>
+<p id="p-30">If we go back to the graph of our function from <a href="" class="xref" data-knowl="./knowl/ex-avg_rate1.html" title="Example 1.3">Example 1.3</a>, and keep drawing secant lines for every small interval, we end up having</p>
+<figure class="figure figure-like" id="figure-3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/im-secant_line_to_tangent_line.svg" role="img" class="contained" alt="Secant Lines to Tangent Lines"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.11<span class="period">.</span></span><span class="space"> </span>Several secant lines</figcaption></figure></section></section></div></main>
 </div>
 </body>
 </html>
