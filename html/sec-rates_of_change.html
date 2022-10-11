@@ -69,16 +69,17 @@ startup: {
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="handout-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="handout-1.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="handout-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="handout-1.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-limits.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="handout-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="handout-1.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="handout-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="handout-1.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-limits.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul><li class="link active">
+<nav id="toc"><ul>
+<li class="link active">
 <a href="sec-rates_of_change.html" data-scroll="sec-rates_of_change" class="internal"><span class="codenumber">1</span> <span class="title">Rates of Change</span></a><ul>
-<li><a href="sec-rates_of_change.html#subsec-performance_criteria" data-scroll="subsec-performance_criteria" class="internal">Performance Criteria</a></li>
+<li><a href="sec-rates_of_change.html#subsec-rc_performance_criteria" data-scroll="subsec-rc_performance_criteria" class="internal">Performance Criteria</a></li>
 <li><a href="sec-rates_of_change.html#subsec-average_rate_of_change" data-scroll="subsec-average_rate_of_change" class="internal">Average Rate of Change</a></li>
 <li><a href="sec-rates_of_change.html#subsec-avg_rate_of_change" data-scroll="subsec-avg_rate_of_change" class="internal">Average Rate of Change of a Function</a></li>
 <li><a href="sec-rates_of_change.html#subsec-avg_velocity" data-scroll="subsec-avg_velocity" class="internal">Average Velocity</a></li>
@@ -86,12 +87,19 @@ startup: {
 <li><a href="sec-rates_of_change.html#subsec-inst_rate_of_change" data-scroll="subsec-inst_rate_of_change" class="internal">Instataneous Rate of Change</a></li>
 <li><a href="sec-rates_of_change.html#subsec-tangent_lines" data-scroll="subsec-tangent_lines" class="internal">Tangent Lines</a></li>
 </ul>
-</li></ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</li>
+<li class="link">
+<a href="sec-limits.html" data-scroll="sec-limits" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a><ul>
+<li><a href="sec-limits.html#subsec-limits_performance_criteria" data-scroll="subsec-limits_performance_criteria" class="internal">Performance Criteria</a></li>
+<li><a href="sec-limits.html#subsec-limit_def" data-scroll="subsec-limit_def" class="internal">Definition of a Limit</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-rates_of_change"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1</span> <span class="title">Rates of Change</span>
 </h2>
-<section class="subsection" id="subsec-performance_criteria"><h3 class="heading hide-type">
+<section class="subsection" id="subsec-rc_performance_criteria"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1</span> <span class="title">Performance Criteria</span>
 </h3>
 <ol id="p-1" class="decimal">
@@ -249,7 +257,11 @@ h_s - h_b = 14,000\text{ ft.} - 5,000\text{ ft.} = 9,000\text{ ft.}
 </h3>
 <p id="p-30">If we go back to the graph of our function from <a href="" class="xref" data-knowl="./knowl/ex-avg_rate1.html" title="Example 1.3">Example 1.3</a>, and keep drawing secant lines for every small interval, we end up having</p>
 <figure class="figure figure-like" id="figure-3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/im-secant_line_to_tangent_line.svg" role="img" class="contained" alt="Secant Lines to Tangent Lines"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.11<span class="period">.</span></span><span class="space"> </span>Several secant lines</figcaption></figure></section></section></div></main>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.11<span class="period">.</span></span><span class="space"> </span>Several secant lines</figcaption></figure><p id="p-31">If we look closely at the graph, then we can see that the red secant line  “approaches” the blue tangent line at the point <span class="process-math">\(x=0\text{.}\)</span> This happens as the length of the interval between the two points (where the left end point is fixed at 0 and the right end point approaches 0) gets smaller and smaller. This can be verified by looking at the black and green secant lines which are closer to the blue tangent line than the original red secant line.</p>
+<p id="p-32">So what about the slope of this tangent line at <span class="process-math">\(x=0\text{?}\)</span>  Recall we previously concluded that the slope of the secant line joining two points is precisely the average rate of change of the function between those two points. We also defined the instantaneous rate of change to be the <em class="alert">limit</em> of the average rate of change over very small intervals, which we computed in the second column of the table above. Thus,</p>
+<article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+</h4>The slope of the tangent line to the graph of function <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=a\)</span> is the instantaneous rate of change of the function at <span class="process-math">\(x=a\text{.}\)</span></article></section></section></div></main>
 </div>
 </body>
 </html>

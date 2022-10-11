@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Limits</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      $(document).trigger("runestone:mathjax-ready");
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="handout-1.html"><span class="title">Rates of Change and Limits</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-rates_of_change.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="handout-1.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-rates_of_change.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="handout-1.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="sec-rates_of_change.html" data-scroll="sec-rates_of_change" class="internal"><span class="codenumber">1</span> <span class="title">Rates of Change</span></a><ul>
+<li><a href="sec-rates_of_change.html#subsec-rc_performance_criteria" data-scroll="subsec-rc_performance_criteria" class="internal">Performance Criteria</a></li>
+<li><a href="sec-rates_of_change.html#subsec-average_rate_of_change" data-scroll="subsec-average_rate_of_change" class="internal">Average Rate of Change</a></li>
+<li><a href="sec-rates_of_change.html#subsec-avg_rate_of_change" data-scroll="subsec-avg_rate_of_change" class="internal">Average Rate of Change of a Function</a></li>
+<li><a href="sec-rates_of_change.html#subsec-avg_velocity" data-scroll="subsec-avg_velocity" class="internal">Average Velocity</a></li>
+<li><a href="sec-rates_of_change.html#subsec-secant_lines" data-scroll="subsec-secant_lines" class="internal">Secant Lines</a></li>
+<li><a href="sec-rates_of_change.html#subsec-inst_rate_of_change" data-scroll="subsec-inst_rate_of_change" class="internal">Instataneous Rate of Change</a></li>
+<li><a href="sec-rates_of_change.html#subsec-tangent_lines" data-scroll="subsec-tangent_lines" class="internal">Tangent Lines</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="sec-limits.html" data-scroll="sec-limits" class="internal"><span class="codenumber">2</span> <span class="title">Limits</span></a><ul>
+<li><a href="sec-limits.html#subsec-limits_performance_criteria" data-scroll="subsec-limits_performance_criteria" class="internal">Performance Criteria</a></li>
+<li><a href="sec-limits.html#subsec-limit_def" data-scroll="subsec-limit_def" class="internal">Definition of a Limit</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-limits"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2</span> <span class="title">Limits</span>
+</h2>
+<section class="subsection" id="subsec-limits_performance_criteria"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1</span> <span class="title">Performance Criteria</span>
+</h3>
+<ol class="decimal">
+<li id="li-6"><p id="p-33">Use the graph of a function to determine left and right hand limits at a point.</p></li>
+<li id="li-7"><p id="p-34">Use left and right hand limits obtained from the graph of a function to determine a limit at a point.</p></li>
+<li id="li-8"><p id="p-35">Use limit notation correctly.</p></li>
+<li id="li-9"><p id="p-36">Calculate left and right hand limits.</p></li>
+<li id="li-10"><p id="p-37">Calculate limits at a point.</p></li>
+<li id="li-11"><p id="p-38">Calculate limits at infinity.</p></li>
+</ol></section><section class="subsection" id="subsec-limit_def"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2</span> <span class="title">Definition of a Limit</span>
+</h3>
+<p id="p-39">In the previous section, it was mentioned that the instantaneous rate of change is the <em class="alert">limit</em> of the average rate of change. We formally define the concept of <em class="alert">limit</em> in this section.</p>
+<p id="p-40">Consider the function <span class="process-math">\(f(x) = \dfrac{e^x-1}{x}\text{.}\)</span> Notice that <span class="process-math">\(f(0)\)</span> is not defined. When we set <span class="process-math">\(x=0\)</span> we have the undefined expression <span class="process-math">\(0/0\text{.}\)</span> However, let's try to find out what happens when <span class="process-math">\(x\)</span> <em class="alert">approaches</em> <span class="process-math">\(0\text{.}\)</span></p>
+<section class="subsubsection" id="subsubsec-left_hand_limit"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.2.1</span> <span class="title">Left Hand Limit</span>
+</h4>
+<p id="p-41">We first choose values of <span class="process-math">\(x\)</span> which are close to 0 but less than 0. In this case, we say we are approaching 0 <em class="alert">from the left</em>. Let's see the values of the function values corresponding to these values of <span class="process-math">\(x\text{.}\)</span></p>
+<figure class="table table-like" id="table-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(x\)</span> approaches 0 from the left</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l1 t0 lines"><span class="process-math">\(x\)</span></th>
+<th scope="col" class="c m b1 r1 l0 t0 lines"><span class="process-math">\((e^x - 1)/x\)</span></th>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(-0.1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.951625\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(-0.01\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.995016\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(-0.001\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.9995\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(-0.0001\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.99995\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(-0.00001\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(0.999995\)</span></td>
+</tr>
+</table></div></figure><p id="p-42">It is clear from the above table that as <span class="process-math">\(x\)</span> gets closer and closer to 0 from the left, the value of <span class="process-math">\(\dfrac{e^x-1}{x}\)</span> gets closer to 1. We say that the <em class="alert">left hand limit</em> of the function <span class="process-math">\(f\)</span> is 1. We write it as,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{x \rightarrow 0^-} \frac{e^x-1}{x} = 1
+\end{equation*}
+</div>
+<p id="p-43">Here <em class="alert">lim</em> is an abbreviation for limit and <span class="process-math">\(x \rightarrow 0^-\)</span> means <span class="process-math">\(x\)</span> approaches 0 from the left.</p></section><section class="subsubsection" id="subsubsec-right_hand_limit"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">2.2.2</span> <span class="title">Right Hand Limit</span>
+</h4>
+<p id="p-44">Now let's choose values of <span class="process-math">\(x\)</span> which are close to 0 but greater than 0. In this case, we say we are approaching 0 <em class="alert">from the right</em>. Let's see the function values corresponding to these values of <span class="process-math">\(x\text{.}\)</span></p>
+<figure class="table table-like" id="table-3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(x\)</span> approaches 0 from the right</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l1 t0 lines"><span class="process-math">\(x\)</span></th>
+<th scope="col" class="c m b1 r1 l0 t0 lines"><span class="process-math">\((e^x - 1)/x\)</span></th>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(0.1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1.051709\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(0.01\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1.00501\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(0.001\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1.0005\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(0.0001\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1.00005\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(0.00001\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1.000005\)</span></td>
+</tr>
+</table></div></figure></section></section></section></div></main>
+</div>
+</body>
+</html>
